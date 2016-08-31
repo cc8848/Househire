@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="househire"
+  id="myeclipse.1249788261953"
+  context-root="/househire"
+  j2ee-spec="1.4"
+  archive="househire.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

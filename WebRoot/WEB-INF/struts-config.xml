@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+    <form-bean name="userForm" type="com.cstp.struts.form.UserForm" />
+    <form-bean name="hireinfoForm" type="com.cstp.struts.form.HireinfoForm" />
+
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action
+      attribute="userForm"
+      name="userForm"
+      parameter="status"
+      path="/user"
+      scope="request"
+      type="com.cstp.struts.action.UserAction" >
+    <forward name="index" path="/index.jsp"></forward>
+    <forward name="user" path="/user.jsp"></forward>
+    <forward name="regist" path="/regist.jsp"></forward>
+    </action>
+    <action
+      attribute="hireinfoForm"
+      name="hireinfoForm"
+      parameter="status"
+      path="/hireinfo"
+      scope="request"
+      type="com.cstp.struts.action.HireinfoAction" >
+    <forward name="list" path="/list.jsp"></forward>
+    <forward name="my" path="/my.jsp"></forward>
+    <forward name="hireinfo" path="/hireinfo.do?status=myHireinfo"></forward>
+    <forward name="update" path="/update.jsp"></forward>
+    <forward name="detail" path="/detail.jsp"></forward>
+    <forward name="postconfirm" path="/postconfirm.jsp"></forward>
+    </action>
+
+  </action-mappings>
+
+  <message-resources parameter="com.cstp.struts.ApplicationResources" />
+</struts-config>
+
